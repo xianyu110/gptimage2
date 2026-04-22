@@ -51,6 +51,8 @@ jobs:
           APIPRO_TIMEOUT_SECONDS: "60"
           APIPRO_LOOKBACK_HOURS: "12"
           APIPRO_MAX_ITEMS: "30"
+          APIPRO_MIN_VIEWS: "1000"
+          APIPRO_MIN_RETWEETS: "20"
           # Optional overrides:
           # APIPRO_QUERY: '(gptimage2 OR gpt-image-2) (prompt OR 提示词)'
           # APIPRO_LOOKBACK_HOURS: '24'

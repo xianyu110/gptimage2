@@ -40,6 +40,8 @@ def post_chat_completion(
     query: str,
     lookback_hours: int,
     max_items: int,
+    min_views: int,
+    min_retweets: int,
     timeout_seconds: int,
 ) -> Dict[str, Any]:
     endpoint = f"{base_url}/chat/completions"
@@ -50,21 +52,28 @@ def post_chat_completion(
     )
 
     user_prompt = (
-        "Task: collect latest X posts related to GPT-Image-2 prompts.\n"
+        "Task: collect high-performing X posts related to GPT-Image-2 prompts.\n"
         f"Lookback hours: {lookback_hours}\n"
         f"Search query intent: {query}\n"
         f"Max items: {max_items}\n"
+        f"Min views: {min_views}\n"
+        f"Min retweets: {min_retweets}\n"
         "Rules:\n"
         "1) Deduplicate by URL or text similarity.\n"
-        "2) Keep newest first.\n"
-        "3) For each item include prompt when available.\n"
+        "2) Keep only posts with usable prompt content.\n"
+        "3) Must satisfy both: view_count >= min_views and retweet_count >= min_retweets.\n"
+        "4) Exclude spam/ads/giveaway-only/unrelated model content.\n"
+        "5) Rank by high engagement first, then newer first.\n"
+        "6) For each item include prompt when available.\n"
+        "7) Do not fabricate metrics. If unknown, set null.\n"
         "Output strictly as JSON object:\n"
         "{"
         "\"meta\":{"
         "\"source\":\"x\","
         "\"lookback_hours\":24,"
         "\"query\":\"...\","
-        "\"count\":0"
+        "\"count\":0,"
+        "\"filters\":{\"min_views\":1000,\"min_retweets\":20}"
         "},"
         "\"items\":["
         "{"
@@ -73,7 +82,12 @@ def post_chat_completion(
         "\"created_at\":\"\","
         "\"text\":\"\","
         "\"prompt\":\"\","
-        "\"reason\":\"\""
+        "\"reason\":\"\","
+        "\"view_count\":0,"
+        "\"retweet_count\":0,"
+        "\"like_count\":0,"
+        "\"reply_count\":0,"
+        "\"engagement_score\":0"
         "}"
         "]"
         "}"
@@ -126,6 +140,8 @@ def call_with_retry_and_fallback(
     query: str,
     lookback_hours: int,
     max_items: int,
+    min_views: int,
+    min_retweets: int,
     timeout_seconds: int,
     max_retries: int,
     retry_seconds: int,
@@ -146,6 +162,8 @@ def call_with_retry_and_fallback(
                     query=query,
                     lookback_hours=lookback_hours,
                     max_items=max_items,
+                    min_views=min_views,
+                    min_retweets=min_retweets,
                     timeout_seconds=timeout_seconds,
                 )
                 return resp, model
@@ -232,7 +250,29 @@ def parse_json_flexible(content: str) -> Dict[str, Any]:
     raise ValueError(f"Invalid model output JSON: {last_error}")
 
 
-def normalize_item(item: Dict[str, Any]) -> Dict[str, str]:
+def to_int_or_none(value: Any) -> int | None:
+    if value is None:
+        return None
+    if isinstance(value, bool):
+        return None
+    if isinstance(value, int):
+        return value
+    if isinstance(value, float):
+        return int(value)
+    if isinstance(value, str):
+        cleaned = value.strip().replace(",", "")
+        if not cleaned:
+            return None
+        try:
+            if "." in cleaned:
+                return int(float(cleaned))
+            return int(cleaned)
+        except ValueError:
+            return None
+    return None
+
+
+def normalize_item(item: Dict[str, Any]) -> Dict[str, Any]:
     return {
         "url": str(item.get("url", "")).strip(),
         "author": str(item.get("author", "")).strip(),
@@ -240,6 +280,11 @@ def normalize_item(item: Dict[str, Any]) -> Dict[str, str]:
         "text": str(item.get("text", "")).strip(),
         "prompt": str(item.get("prompt", "")).strip(),
         "reason": str(item.get("reason", "")).strip(),
+        "view_count": to_int_or_none(item.get("view_count")),
+        "retweet_count": to_int_or_none(item.get("retweet_count")),
+        "like_count": to_int_or_none(item.get("like_count")),
+        "reply_count": to_int_or_none(item.get("reply_count")),
+        "engagement_score": to_int_or_none(item.get("engagement_score")),
     }
 
 
@@ -249,9 +294,11 @@ def normalize_output(
     model: str,
     query: str,
     lookback_hours: int,
+    min_views: int,
+    min_retweets: int,
 ) -> Dict[str, Any]:
     raw_items = parsed.get("items", [])
-    items: List[Dict[str, str]] = []
+    items: List[Dict[str, Any]] = []
     if isinstance(raw_items, list):
         for obj in raw_items:
             if isinstance(obj, dict):
@@ -268,6 +315,10 @@ def normalize_output(
             "provider": "apipro.maynor1024.live",
             "base_url": base_url,
             "model": model,
+            "filters": {
+                "min_views": min_views,
+                "min_retweets": min_retweets,
+            },
         },
         "items": items,
     }
@@ -298,6 +349,8 @@ def main() -> int:
     ).strip()
     lookback_hours = env_int("APIPRO_LOOKBACK_HOURS", 24, 1, 168)
     max_items = env_int("APIPRO_MAX_ITEMS", 60, 1, 200)
+    min_views = env_int("APIPRO_MIN_VIEWS", 1000, 0, 10_000_000_000)
+    min_retweets = env_int("APIPRO_MIN_RETWEETS", 20, 0, 10_000_000)
     timeout_seconds = env_int("APIPRO_TIMEOUT_SECONDS", 90, 10, 600)
     max_retries = env_int("APIPRO_MAX_RETRIES", 4, 0, 10)
     retry_seconds = env_int("APIPRO_RETRY_SECONDS", 8, 1, 60)
@@ -317,6 +370,8 @@ def main() -> int:
             query=query,
             lookback_hours=lookback_hours,
             max_items=max_items,
+            min_views=min_views,
+            min_retweets=min_retweets,
             timeout_seconds=timeout_seconds,
             max_retries=max_retries,
             retry_seconds=retry_seconds,
@@ -341,6 +396,8 @@ def main() -> int:
         model=used_model,
         query=query,
         lookback_hours=lookback_hours,
+        min_views=min_views,
+        min_retweets=min_retweets,
     )
     write_json(output_file, output)
     print(f"Saved {output['meta']['count']} items to {output_file}")
