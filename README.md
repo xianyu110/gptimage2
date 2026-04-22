@@ -15,6 +15,18 @@
 
 ---
 
+## 使用方法
+
+GPTImage2 模型五种使用方法：
+
+- 官网使用: https://chatgpt.com/
+- 国内使用地址：https://chatgpt-plus.top/list/#/home
+- API 使用地址：https://apipro.maynor1024.live/
+- Codex 使用：https://maynorai.jichiyun.sbs/buy/13
+- 国外使用地址：https://gptimage2.asia/
+
+---
+
 ## 目录
 
 - [GPT-Image-2 是什么](#gpt-image-2-是什么)
@@ -934,6 +946,18 @@ GPT-Image-2 虽然强大，但仍有以下局限：
 4. 《五大真实场景横测 GPT-image-2 和 Nano Banana2》
 5. 量子位《GPT-Image-2 正式发布！设计师可以告别「古法设计」了》
 6. 新智元《Images 2.0 登顶王座！大米刻字，生图跨入 GPT-5 时代》
+
+---
+
+## 使用方法
+
+GPTImage2 模型五种使用方法：
+
+- 官网使用: https://chatgpt.com/
+- 国内使用地址：https://chatgpt-plus.top/list/#/home
+- API 使用地址：https://apipro.maynor1024.live/
+- Codex 使用：https://maynorai.jichiyun.sbs/buy/13
+- 国外使用地址：https://gptimage2.asia/
 
 ---
 

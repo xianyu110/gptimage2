@@ -3,152 +3,630 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awesome GPT-Image-2 - 提示词完全教程</title>
+    <title>Awesome GPT-Image-2 | 史上最全提示词实战手册</title>
+    <meta name="description" content="Awesome GPT-Image-2 的可视化阅读版：系统化提示词框架、10+实战场景、最佳实践与避坑清单，内容自动同步仓库 README。">
+    <meta name="keywords" content="GPT-Image-2,提示词,AI绘图,Prompt,图像生成,OpenAI,教程">
+    <meta name="robots" content="index,follow,max-image-preview:large">
+    <meta name="theme-color" content="#1a102e">
+    <meta name="color-scheme" content="dark">
+    <link rel="canonical" href="https://xianyu110.github.io/awesome-gptimage2/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Awesome GPT-Image-2">
+    <meta property="og:title" content="Awesome GPT-Image-2 | 史上最全提示词实战手册">
+    <meta property="og:description" content="10+场景、30+提示词模板、实战技巧与参数方法论，内容与仓库 README 自动同步。">
+    <meta property="og:url" content="https://xianyu110.github.io/awesome-gptimage2/">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Awesome GPT-Image-2 | 史上最全提示词实战手册">
+    <meta name="twitter:description" content="结构化提示词框架 + 场景模板 + 实战避坑，一站式掌握 GPT-Image-2。">
+
     <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Ctext%20y='.9em'%20font-size='90'%3E%F0%9F%96%BC%EF%B8%8F%3C/text%3E%3C/svg%3E">
-    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "Awesome GPT-Image-2 史上最全提示词实战手册",
+      "description": "围绕 GPT-Image-2 的完整提示词框架、实战模板和最佳实践，内容自动同步 GitHub 仓库 README。",
+      "author": {
+        "@type": "Person",
+        "name": "xianyu110"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "GitHub Pages"
+      },
+      "mainEntityOfPage": "https://xianyu110.github.io/awesome-gptimage2/",
+      "inLanguage": "zh-CN"
+    }
+    </script>
 </head>
 <body>
+<a class="skip-link" href="#main-content">跳到正文</a>
+<div class="bg-layer" aria-hidden="true"></div>
 
-<div class="pixel-border">
-    <header class="hero">
-        <div class="pixel-stars"></div>
-        <div class="hero-content">
-            <div class="pixel-logo">
-                <span class="logo-icon">&#x1F4F7;</span>
-            </div>
-            <h1 class="pixel-title">AWESOME<br>GPT-IMAGE-2</h1>
-            <p class="subtitle">GPT-Image-2 提示词完全教程</p>
-            <div class="badge-row">
-                <span class="badge badge-green">30+ 提示词</span>
-                <span class="badge badge-blue">10 大场景</span>
-                <span class="badge badge-purple">6 篇实测</span>
-            </div>
-            <div class="stats-bar">
-                <div class="stat">
-                    <span class="stat-num">240+</span>
-                    <span class="stat-label">Arena 领先分</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-num">8</span>
-                    <span class="stat-label">单次最多图</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-num">2K</span>
-                    <span class="stat-label">最大分辨率</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-num">3s</span>
-                    <span class="stat-label">生成速度</span>
+<div class="site-shell">
+    <header class="hero" id="top">
+        <div class="hero-noise" aria-hidden="true"></div>
+        <div class="hero-inner">
+            <div class="hero-main">
+                <p class="hero-kicker">Prompt Engineering Playbook</p>
+                <h1 class="hero-title">AWESOME<br>GPT-IMAGE-2</h1>
+                <p class="hero-subtitle">史上最全提示词实战手册</p>
+                <p class="hero-desc">把零散技巧整理为可复用方法论：从提示词结构、参数策略到场景模板，支持快速上手与长期迭代。</p>
+                <div class="hero-actions">
+                    <a href="#readme" class="btn btn-primary">开始阅读</a>
+                    <a href="https://github.com/xianyu110/awesome-gptimage2" class="btn btn-ghost" target="_blank" rel="noreferrer">查看 GitHub</a>
                 </div>
             </div>
+
+            <aside class="hero-panel" aria-label="关键指标">
+                <div class="stat-grid">
+                    <div class="stat-card">
+                        <span class="stat-value">30+</span>
+                        <span class="stat-name">高质量提示词</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value">10+</span>
+                        <span class="stat-name">实战场景覆盖</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value">6</span>
+                        <span class="stat-name">深度文章整合</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value">Auto</span>
+                        <span class="stat-name">README 实时同步</span>
+                    </div>
+                </div>
+            </aside>
         </div>
     </header>
 
-    <nav class="pixel-nav">
-        <div class="nav-inner">
-            <a href="#readme" class="nav-btn">README</a>
-            <a href="https://github.com/xianyu110/awesome-gptimage2" class="nav-btn nav-btn-github" target="_blank">GitHub</a>
+    <section class="usage-section usage-section-top" aria-label="使用方法">
+        <div class="usage-card">
+            <h2 class="usage-title">使用方法</h2>
+            <p class="usage-desc">GPTImage2 模型五种使用方法：</p>
+            <ul class="usage-list">
+                <li>官网使用: <a href="https://chatgpt.com/" target="_blank" rel="noreferrer">https://chatgpt.com/</a></li>
+                <li>国内使用地址：<a href="https://chatgpt-plus.top/list/#/home" target="_blank" rel="noreferrer">https://chatgpt-plus.top/list/#/home</a></li>
+                <li>API 使用地址：<a href="https://apipro.maynor1024.live/" target="_blank" rel="noreferrer">https://apipro.maynor1024.live/</a></li>
+                <li>Codex 使用：<a href="https://maynorai.jichiyun.sbs/buy/13" target="_blank" rel="noreferrer">https://maynorai.jichiyun.sbs/buy/13</a></li>
+                <li>国外使用地址：<a href="https://gptimage2.asia/" target="_blank" rel="noreferrer">https://gptimage2.asia/</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <nav class="top-nav" aria-label="主导航">
+        <div class="nav-track">
+            <a href="#overview" class="nav-link">导览</a>
+            <a href="#readme" class="nav-link">完整内容</a>
+            <a href="#faq" class="nav-link">FAQ</a>
+            <a href="https://github.com/xianyu110/awesome-gptimage2" class="nav-link nav-link-github" target="_blank" rel="noreferrer">GitHub</a>
         </div>
     </nav>
 
-    <main class="content">
+    <main class="content" id="main-content">
+        <section id="overview" class="section">
+            <h2 class="section-title">快速导览</h2>
+            <div class="overview-grid">
+                <article class="overview-card">
+                    <h3>提示词框架</h3>
+                    <p>从主体、风格、构图、光影到材质，提供可组合模板，减少“玄学调参”。</p>
+                </article>
+                <article class="overview-card">
+                    <h3>场景模板库</h3>
+                    <p>电商、海报、UI、角色、写实摄影、编辑修改等场景即拿即用。</p>
+                </article>
+                <article class="overview-card">
+                    <h3>实战避坑</h3>
+                    <p>覆盖常见失败原因、结构化修复策略和可复现优化路径。</p>
+                </article>
+            </div>
+        </section>
+
         <section id="readme" class="section">
-            <h2 class="section-title"><span class="pixel-icon">&#x1F4D6;</span> README</h2>
-            <div class="card readme-card">
+            <div class="section-head">
+                <h2 class="section-title">完整 README</h2>
+                <a class="readme-raw-link" id="readme-raw-link" href="README.md" target="_blank" rel="noreferrer">打开原始文件</a>
+            </div>
+
+            <div class="readme-card">
                 <div class="readme-meta">
                     <span class="readme-status" id="readme-status">正在加载 README.md…</span>
-                    <a class="readme-link" id="readme-raw-link" href="README.md" target="_blank" rel="noreferrer">打开原始 README</a>
+                    <span class="readme-clock" id="readme-clock">最后刷新：--</span>
+                    <button class="readme-retry-btn" id="readme-retry-btn" type="button" hidden>重试加载</button>
                 </div>
+                <div class="prompt-filter" id="prompt-filter" hidden>
+                    <span class="prompt-filter-title">提示词分类</span>
+                    <span class="prompt-filter-summary" id="prompt-filter-summary"></span>
+                    <div class="prompt-filter-buttons" id="prompt-filter-buttons" role="tablist" aria-label="提示词分类筛选"></div>
+                </div>
+
+                <div id="readme-loading" class="readme-loading" aria-hidden="true">
+                    <span></span><span></span><span></span>
+                </div>
+
                 <article id="readme-content" class="markdown-body" aria-live="polite"></article>
             </div>
         </section>
 
+        <section id="faq" class="section">
+            <h2 class="section-title">FAQ</h2>
+            <div class="faq-list">
+                <details>
+                    <summary>页面内容会和仓库同步吗？</summary>
+                    <p>会。页面优先读取同目录 README.md，失败后自动回退到 GitHub Raw 地址。</p>
+                </details>
+                <details>
+                    <summary>这个页面适合二次改造吗？</summary>
+                    <p>适合。结构是语义化 HTML + 独立样式层，适合继续扩展专题页、提示词搜索或分类筛选。</p>
+                </details>
+                <details>
+                    <summary>移动端阅读体验如何？</summary>
+                    <p>已针对小屏做字体、间距、卡片密度和导航触控优化，保证可读性与点击可用性。</p>
+                </details>
+            </div>
+        </section>
+
+        <section class="usage-section usage-section-bottom" aria-label="使用方法（页尾）">
+            <div class="usage-card">
+                <h2 class="usage-title">使用方法</h2>
+                <p class="usage-desc">GPTImage2 模型五种使用方法：</p>
+                <ul class="usage-list">
+                    <li>官网使用: <a href="https://chatgpt.com/" target="_blank" rel="noreferrer">https://chatgpt.com/</a></li>
+                    <li>国内使用地址：<a href="https://chatgpt-plus.top/list/#/home" target="_blank" rel="noreferrer">https://chatgpt-plus.top/list/#/home</a></li>
+                    <li>API 使用地址：<a href="https://apipro.maynor1024.live/" target="_blank" rel="noreferrer">https://apipro.maynor1024.live/</a></li>
+                    <li>Codex 使用：<a href="https://maynorai.jichiyun.sbs/buy/13" target="_blank" rel="noreferrer">https://maynorai.jichiyun.sbs/buy/13</a></li>
+                    <li>国外使用地址：<a href="https://gptimage2.asia/" target="_blank" rel="noreferrer">https://gptimage2.asia/</a></li>
+                </ul>
+            </div>
+        </section>
     </main>
 
-    <footer class="pixel-footer">
-        <p>Made with GPT-Image-2 | Last updated: 2026-04-22</p>
-        <p>内容整合自 6 篇深度实测文章 | 请负责任地使用 AI 图像生成工具</p>
+    <footer class="site-footer">
+        <p>Made for GPT-Image-2 Creators · <span id="footer-date">2026-04-22</span></p>
+        <p>内容整合自实测文章与开源社区经验，欢迎补充与 PR。</p>
     </footer>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+<button class="back-to-top" id="back-to-top" aria-label="返回顶部">↑</button>
+
+<noscript>
+    <div class="noscript-box">当前页面需要 JavaScript 才能渲染 README 内容，请直接打开仓库 README。</div>
+</noscript>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js" defer></script>
 <script>
-// Smooth scroll for nav
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+(function () {
+    const NAV_ACTIVE_CLASS = 'is-active';
+    const readmeStatusEl = document.getElementById('readme-status');
+    const readmeContentEl = document.getElementById('readme-content');
+    const readmeLoadingEl = document.getElementById('readme-loading');
+    const readmeRawLinkEl = document.getElementById('readme-raw-link');
+    const readmeClockEl = document.getElementById('readme-clock');
+    const readmeRetryBtnEl = document.getElementById('readme-retry-btn');
+    const promptFilterEl = document.getElementById('prompt-filter');
+    const promptFilterSummaryEl = document.getElementById('prompt-filter-summary');
+    const promptFilterButtonsEl = document.getElementById('prompt-filter-buttons');
+    const backToTopBtn = document.getElementById('back-to-top');
+
+    function setupAnchorScroll() {
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+            anchor.addEventListener('click', (event) => {
+                const targetId = anchor.getAttribute('href');
+                const targetEl = targetId ? document.querySelector(targetId) : null;
+                if (!targetEl) return;
+                event.preventDefault();
+                targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+    }
+
+    function absolutizeLinksAndMakeExternal(containerEl) {
+        containerEl.querySelectorAll('a[href]').forEach((anchor) => {
+            const href = anchor.getAttribute('href') || '';
+            if (!href || href.startsWith('#')) return;
+            anchor.target = '_blank';
+            anchor.rel = 'noreferrer noopener';
+        });
+    }
+
+    function addLazyLoadingToImages(containerEl) {
+        containerEl.querySelectorAll('img').forEach((img) => {
+            img.loading = 'lazy';
+            img.decoding = 'async';
+            img.referrerPolicy = 'no-referrer';
+        });
+    }
+
+    function updateClock() {
+        if (!readmeClockEl) return;
+        const now = new Date();
+        const stamp = now.toLocaleString('zh-CN', { hour12: false });
+        readmeClockEl.textContent = '最后刷新：' + stamp;
+
+        const footerDateEl = document.getElementById('footer-date');
+        if (footerDateEl) {
+            footerDateEl.textContent = now.toISOString().slice(0, 10);
         }
-    });
-});
+    }
 
-function absolutizeLinksAndMakeExternal(containerEl) {
-    containerEl.querySelectorAll('a[href]').forEach(a => {
-        const href = a.getAttribute('href') || '';
-        if (!href) return;
-        if (href.startsWith('#')) return;
-        a.target = '_blank';
-        a.rel = 'noreferrer';
-    });
-}
+    function setReadmeRetryVisible(visible) {
+        if (!readmeRetryBtnEl) return;
+        readmeRetryBtnEl.hidden = !visible;
+    }
 
-function addLazyLoadingToImages(containerEl) {
-    containerEl.querySelectorAll('img').forEach(img => {
-        img.loading = 'lazy';
-        img.decoding = 'async';
-        img.referrerPolicy = 'no-referrer';
-    });
-}
+    function loadScript(src, timeoutMs) {
+        return new Promise((resolve, reject) => {
+            const timeout = setTimeout(() => reject(new Error('timeout: ' + src)), timeoutMs || 6000);
+            const script = document.createElement('script');
+            script.src = src;
+            script.async = true;
+            script.onload = () => {
+                clearTimeout(timeout);
+                resolve();
+            };
+            script.onerror = () => {
+                clearTimeout(timeout);
+                reject(new Error('load failed: ' + src));
+            };
+            document.head.appendChild(script);
+        });
+    }
 
-async function loadReadme() {
-    const statusEl = document.getElementById('readme-status');
-    const contentEl = document.getElementById('readme-content');
-    const rawLinkEl = document.getElementById('readme-raw-link');
-
-    try {
-        if (!window.marked) throw new Error('marked.js 加载失败');
-        if (!window.DOMPurify) throw new Error('DOMPurify 加载失败');
-        marked.setOptions({ gfm: true, breaks: true });
-
-        const rawReadmeUrl = 'https://raw.githubusercontent.com/xianyu110/awesome-gptimage2/main/README.md';
-        const candidates = ['README.md', rawReadmeUrl];
-        let md = null;
-        let lastErr = null;
-
-        for (const url of candidates) {
+    async function ensureLibrary(name, checkReady, fallbackSources) {
+        if (checkReady()) return;
+        let lastError = null;
+        for (const src of fallbackSources) {
             try {
-                const res = await fetch(url, { cache: 'no-store' });
-                if (!res.ok) throw new Error(String(res.status));
-                md = await res.text();
-                if (rawLinkEl) rawLinkEl.href = url;
+                await loadScript(src, 7000);
+                if (checkReady()) return;
+            } catch (error) {
+                lastError = error;
+            }
+        }
+        throw lastError || new Error(name + ' 加载失败');
+    }
+
+    async function ensureReadmeDependencies() {
+        await ensureLibrary(
+            'marked.js',
+            () => Boolean(window.marked && typeof window.marked.parse === 'function'),
+            [
+                'https://unpkg.com/marked/marked.min.js',
+                'https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js',
+                'https://cdn.bootcdn.net/ajax/libs/marked/12.0.2/marked.min.js'
+            ]
+        );
+        await ensureLibrary(
+            'DOMPurify',
+            () => Boolean(window.DOMPurify && typeof window.DOMPurify.sanitize === 'function'),
+            [
+                'https://unpkg.com/dompurify@3.1.6/dist/purify.min.js',
+                'https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.6/purify.min.js',
+                'https://cdn.bootcdn.net/ajax/libs/dompurify/3.1.6/purify.min.js'
+            ]
+        );
+    }
+
+    function copyTextToClipboard(text) {
+        if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+            return navigator.clipboard.writeText(text);
+        }
+        return new Promise((resolve, reject) => {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.setAttribute('readonly', '');
+            textarea.style.position = 'absolute';
+            textarea.style.left = '-9999px';
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                const success = document.execCommand('copy');
+                document.body.removeChild(textarea);
+                if (!success) throw new Error('copy failed');
+                resolve();
+            } catch (error) {
+                document.body.removeChild(textarea);
+                reject(error);
+            }
+        });
+    }
+
+    function attachCopyButtons(containerEl) {
+        containerEl.querySelectorAll('pre > code').forEach((codeEl) => {
+            const preEl = codeEl.parentElement;
+            if (!preEl || preEl.querySelector('.copy-code-btn')) return;
+
+            const button = document.createElement('button');
+            button.type = 'button';
+            button.className = 'copy-code-btn';
+            button.textContent = '复制';
+            button.setAttribute('aria-label', '复制代码块');
+
+            button.addEventListener('click', async () => {
+                const text = codeEl.textContent || '';
+                try {
+                    await copyTextToClipboard(text);
+                    button.textContent = '已复制';
+                    button.classList.add('copied');
+                    setTimeout(() => {
+                        button.textContent = '复制';
+                        button.classList.remove('copied');
+                    }, 1200);
+                } catch (error) {
+                    button.textContent = '失败';
+                    button.classList.remove('copied');
+                    setTimeout(() => {
+                        button.textContent = '复制';
+                    }, 1200);
+                }
+            });
+
+            preEl.appendChild(button);
+        });
+    }
+
+    function normalizeCategoryName(text) {
+        const source = (text || '').replace(/\s+/g, ' ').trim();
+        const normalized = source.replace(/^[\d一二三四五六七八九十百千]+[、.．\-\s]*/, '').trim();
+        return normalized || source || '未分类';
+    }
+
+    function slugifyCategory(text) {
+        const slug = (text || '').toLowerCase().replace(/[^\u4e00-\u9fa5a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+        return slug || 'category';
+    }
+
+    function extractPromptCategoriesFromMarkdown(markdown) {
+        const categories = [];
+        const lines = (markdown || '').split(/\r?\n/);
+        let inPromptSection = false;
+
+        lines.forEach((line) => {
+            if (/^##\s+提示词合集/.test(line)) {
+                inPromptSection = true;
+                return;
+            }
+            if (inPromptSection && /^##\s+/.test(line)) {
+                inPromptSection = false;
+            }
+            if (!inPromptSection) return;
+
+            const matched = line.match(/^###\s+(.+)/);
+            if (matched && matched[1]) {
+                categories.push(normalizeCategoryName(matched[1]));
+            }
+        });
+
+        return categories;
+    }
+
+    function setupPromptCategoryFilter(containerEl, preferredLabels) {
+        if (!promptFilterEl || !promptFilterButtonsEl || !promptFilterSummaryEl) return;
+        promptFilterEl.hidden = true;
+        promptFilterButtonsEl.innerHTML = '';
+        promptFilterSummaryEl.textContent = '';
+
+        const h2List = Array.from(containerEl.querySelectorAll('h2'));
+        const promptSectionTitle = h2List.find((h2) => (h2.textContent || '').includes('提示词合集'));
+        if (!promptSectionTitle) return;
+
+        let sectionEnd = null;
+        for (let node = promptSectionTitle.nextElementSibling; node; node = node.nextElementSibling) {
+            if (node.tagName === 'H2') {
+                sectionEnd = node;
                 break;
-            } catch (e) {
-                lastErr = e;
             }
         }
 
-        if (md == null) throw lastErr || new Error('README 获取失败');
-        const html = marked.parse(md);
-        const safeHtml = DOMPurify.sanitize(html, { USE_PROFILES: { html: true } });
-        contentEl.innerHTML = safeHtml;
+        const categoryTitleNodes = [];
+        for (let node = promptSectionTitle.nextElementSibling; node && node !== sectionEnd; node = node.nextElementSibling) {
+            if (node.tagName === 'H3') categoryTitleNodes.push(node);
+        }
 
-        absolutizeLinksAndMakeExternal(contentEl);
-        addLazyLoadingToImages(contentEl);
-        statusEl.textContent = '已加载 README.md（网页内容自动与仓库同步）';
-    } catch (err) {
-        statusEl.textContent = '加载失败：' + (err && err.message ? err.message : String(err));
-        contentEl.textContent = 'README 渲染失败。请点击上方“打开原始 README”。';
+        const normalizedPreferredLabels = (preferredLabels || []).map((item) => normalizeCategoryName(item));
+        if (normalizedPreferredLabels.length && categoryTitleNodes.length >= normalizedPreferredLabels.length) {
+            normalizedPreferredLabels.forEach((label, index) => {
+                if (!categoryTitleNodes[index]) return;
+                categoryTitleNodes[index].dataset.categoryLabel = label;
+            });
+        }
+
+        if (!categoryTitleNodes.length) return;
+
+        const usedSlugs = new Set();
+        const categoryBlocks = categoryTitleNodes.map((titleNode, index) => {
+            const nextTitle = categoryTitleNodes[index + 1] || sectionEnd;
+            const label = titleNode.dataset.categoryLabel || normalizeCategoryName(titleNode.textContent || '');
+            let slug = slugifyCategory(label);
+            let i = 2;
+            while (usedSlugs.has(slug)) {
+                slug = slugifyCategory(label) + '-' + i;
+                i += 1;
+            }
+            usedSlugs.add(slug);
+
+            const block = document.createElement('section');
+            block.className = 'prompt-category-block';
+            block.dataset.category = slug;
+            block.dataset.categoryLabel = label;
+            titleNode.before(block);
+
+            let cursor = titleNode;
+            while (cursor && cursor !== nextTitle && cursor !== sectionEnd) {
+                const nextNode = cursor.nextElementSibling;
+                block.appendChild(cursor);
+                cursor = nextNode;
+            }
+
+            const promptCount = block.querySelectorAll('h4').length;
+            return { slug, label, block, promptCount };
+        });
+
+        const totalPrompts = categoryBlocks.reduce((sum, item) => sum + item.promptCount, 0);
+
+        function applyCategoryFilter(categorySlug) {
+            categoryBlocks.forEach((item) => {
+                item.block.hidden = categorySlug !== 'all' && item.slug !== categorySlug;
+            });
+            promptFilterButtonsEl.querySelectorAll('.prompt-filter-btn').forEach((btn) => {
+                const selected = btn.dataset.category === categorySlug;
+                btn.classList.toggle('is-active', selected);
+                btn.setAttribute('aria-selected', selected ? 'true' : 'false');
+            });
+
+            if (categorySlug === 'all') {
+                promptFilterSummaryEl.textContent = '共 ' + categoryBlocks.length + ' 类 · ' + totalPrompts + ' 条提示词';
+                return;
+            }
+
+            const target = categoryBlocks.find((item) => item.slug === categorySlug);
+            if (!target) return;
+            promptFilterSummaryEl.textContent = '当前：' + target.label + ' · ' + target.promptCount + ' 条';
+            target.block.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        const allButton = document.createElement('button');
+        allButton.type = 'button';
+        allButton.className = 'prompt-filter-btn';
+        allButton.dataset.category = 'all';
+        allButton.textContent = '全部';
+        allButton.setAttribute('role', 'tab');
+        allButton.setAttribute('aria-selected', 'true');
+        allButton.addEventListener('click', () => applyCategoryFilter('all'));
+        promptFilterButtonsEl.appendChild(allButton);
+
+        categoryBlocks.forEach((item) => {
+            const button = document.createElement('button');
+            button.type = 'button';
+            button.className = 'prompt-filter-btn';
+            button.dataset.category = item.slug;
+            button.textContent = item.label + ' (' + item.promptCount + ')';
+            button.setAttribute('role', 'tab');
+            button.setAttribute('aria-selected', 'false');
+            button.addEventListener('click', () => applyCategoryFilter(item.slug));
+            promptFilterButtonsEl.appendChild(button);
+        });
+
+        promptFilterEl.hidden = false;
+        applyCategoryFilter('all');
     }
-}
 
-loadReadme();
+    async function loadReadme() {
+        if (!readmeStatusEl || !readmeContentEl) return;
+        setReadmeRetryVisible(false);
+        if (readmeLoadingEl) readmeLoadingEl.hidden = false;
+        readmeStatusEl.textContent = '正在加载 README.md…';
+
+        try {
+            await ensureReadmeDependencies();
+
+            marked.setOptions({ gfm: true, breaks: true, headerIds: true, mangle: false });
+            const rawReadmeUrl = 'https://raw.githubusercontent.com/xianyu110/awesome-gptimage2/main/README.md';
+            const candidates = ['README.md', './README.md', rawReadmeUrl];
+            let markdown = null;
+            let lastError = null;
+
+            for (const url of candidates) {
+                try {
+                    const response = await fetch(url, { cache: 'no-store' });
+                    if (!response.ok) throw new Error(String(response.status));
+                    markdown = await response.text();
+                    if (readmeRawLinkEl) readmeRawLinkEl.href = url;
+                    break;
+                } catch (error) {
+                    lastError = error;
+                }
+            }
+
+            if (markdown == null) throw lastError || new Error('README 获取失败');
+
+            const html = marked.parse(markdown);
+            const safeHtml = DOMPurify.sanitize(html, { USE_PROFILES: { html: true } });
+            readmeContentEl.innerHTML = safeHtml;
+            absolutizeLinksAndMakeExternal(readmeContentEl);
+            addLazyLoadingToImages(readmeContentEl);
+            setupPromptCategoryFilter(readmeContentEl, extractPromptCategoriesFromMarkdown(markdown));
+            attachCopyButtons(readmeContentEl);
+
+            readmeStatusEl.textContent = '加载成功：内容已与仓库同步';
+            if (readmeLoadingEl) readmeLoadingEl.hidden = true;
+            updateClock();
+        } catch (error) {
+            const errorMsg = error && error.message ? error.message : String(error);
+            readmeStatusEl.textContent = '加载失败：' + errorMsg;
+            readmeContentEl.textContent = 'README 渲染失败，请点击“打开原始文件”直接查看。';
+            if (readmeLoadingEl) readmeLoadingEl.hidden = true;
+            setReadmeRetryVisible(true);
+            if (promptFilterEl) promptFilterEl.hidden = true;
+        }
+    }
+
+    function setupActiveNav() {
+        const navLinks = Array.from(document.querySelectorAll('.nav-link[href^="#"]'));
+        const sections = navLinks
+            .map((link) => document.querySelector(link.getAttribute('href')))
+            .filter(Boolean);
+
+        if (!navLinks.length || !sections.length) return;
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) return;
+                    const id = '#' + entry.target.id;
+                    navLinks.forEach((link) => {
+                        link.classList.toggle(NAV_ACTIVE_CLASS, link.getAttribute('href') === id);
+                    });
+                });
+            },
+            { rootMargin: '-40% 0px -55% 0px', threshold: [0, 1] }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+    }
+
+    function setupBackToTop() {
+        if (!backToTopBtn) return;
+
+        const toggle = () => {
+            backToTopBtn.classList.toggle('show', window.scrollY > 480);
+        };
+
+        window.addEventListener('scroll', toggle, { passive: true });
+        toggle();
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
+    function boot() {
+        setupAnchorScroll();
+        setupActiveNav();
+        setupBackToTop();
+        if (readmeRetryBtnEl) {
+            readmeRetryBtnEl.addEventListener('click', () => {
+                loadReadme();
+            });
+        }
+        loadReadme();
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', boot);
+    } else {
+        boot();
+    }
+})();
 </script>
-
 </body>
 </html>
