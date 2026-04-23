@@ -114,9 +114,9 @@ jobs:
           APIPRO_API_KEY: ${{ secrets.APIPRO_API_KEY }}
           APIPRO_BASE_URL: http://apipro.maynor1024.live/v1
           APIPRO_MODEL: grok-4-20-non-reasoning
-          APIPRO_FALLBACK_MODELS: "grok-4.1-fast, grok-4.1"
+          APIPRO_FALLBACK_MODELS: "grok-4.1-fast, grok-4.1, grok-4, grok-3"
           # Optional model fallback list, comma separated:
-          # APIPRO_FALLBACK_MODELS: "grok-4.1, gpt-4o-mini"
+          # APIPRO_FALLBACK_MODELS: "grok-4.1-fast, grok-4.1, grok-4, grok-3"
           APIPRO_MAX_RETRIES: "4"
           APIPRO_RETRY_SECONDS: "5"
           APIPRO_TIMEOUT_SECONDS: "60"
