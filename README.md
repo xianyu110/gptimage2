@@ -1248,6 +1248,177 @@ GPT-Image-2 虽然强大，但仍有以下局限：
 
 </details>
 
+### 甲木未来派《Image2 的六大生产级场景，电商、营销、品牌，重新定义 AI 绘画，绝了！》
+
+- 原文链接：https://mp.weixin.qq.com/s/kHI088S3kc50fjsmMWbDLQ
+- 公众号：甲木未来派
+- 作者：甲木Zuiyn
+- 本次补充提取：34 张正文图片
+- 说明：这篇文章没有用“提示词：”统一列出，但明确给了城市海报 Prompt、儿童绘本 Prompt，以及多个生产级场景的可复用描述
+
+#### 原文中可直接复用的 Prompt / 描述
+
+1. 城市宣传海报 Prompt：
+   - 一张充满新春喜庆氛围但不失高雅格调的 2026 城市宣传海报。
+   - 双重曝光，构图延续了 S 型的流动感；
+   - 在这条“河流”中，叠加了一个有山有海河的广州城市手绘图，国潮，景色尽在眼底，壮阔雄伟，令人震撼。
+   - 广州的地标建筑（广州塔，珠江新城建筑群，珠江，广州城里古建筑，游轮，白云山）。
+   - 文字排版优美，大方，字迹清晰完整，尺寸 9:16。
+2. 儿童绘本 Prompt：
+   - 画面手绘文字（用圆润可爱的中文字体准确渲染）：
+   - 顶部标题：「水宝宝的环球旅行」
+   - 四个阶段小标签：「① 云上的家」「② 跳下来咯！」「③ 小河奔跑」「④ 坐电梯回家」
+   - 底部彩色对话框：「小朋友你猜：一滴水要多久才能走完这一圈呢？」
+   - 风格：宫崎骏 × 童书插画，柔和水彩质感，饱和度低，天蓝 + 嫩黄 + 草绿，适合 4-8 岁儿童阅读。
+3. 场景描述：
+   - 为「弹动洗发水」品牌设计一整套活动主 Banner，覆盖抖音弹窗广告、小红书种草图等多个平台。
+   - 同样地，还是我们这个洗护品牌，现在想生成商品详情页图，可以直接一键迁移。
+   - 为咖啡品牌打造完整视觉体系。
+
+#### 根据图片反推的提示词（推测版）
+
+> 下面这些不是作者逐字统一列出来的 prompt，而是根据正文案例和成图效果整理出的可复用写法。
+
+1. 电商广告与多平台创意（#07-#10）
+   - 为「弹动洗发水」品牌设计一整套活动主 Banner，覆盖抖音弹窗广告、小红书种草图、Instagram 轮播图等多个平台，要求品牌 Slogan、促销文案和产品卖点可直接使用。
+2. 商品详情页与套图迁移（#11-#18）
+   - 根据一张主产品视觉图，自动迁移生成完整电商详情页、亚马逊套图、多角度产品图、痛点场景图、营养成分图和品牌故事长图。
+3. 城市文旅海报批量生成（#19-#20）
+   - 参考同一个国潮双重曝光海报模板，批量生成中国一二线城市的文旅宣传海报，包含城市地标、河流山海元素、中文标题与标语，比例 9:16。
+4. 儿童绘本与教育内容（#21-#22）
+   - 为儿童科普主题批量生成风格统一的跨页绘本插画，画面要有圆润可爱的中文标题、小标签和对话框，整体风格偏宫崎骏式童书水彩。
+5. 品牌套件与视觉系统（#23-#27）
+   - 为「山海咖啡」打造完整品牌视觉体系：Logo、包装设计、产品海报、周边效果图、品牌字体板、咖啡杯场景图和品牌应用展示板。
+6. 日常创意与生活场景（#28-#31）
+   - 修改朋友圈转发图中的文案，保留原图质感；生成扫描件风格数学卷子；生成双重曝光电影海报；生成原神版英雄联盟游戏海报。
+7. 说明
+   - #01-#06 更偏模型能力概览、人物封面、书法与示例图。
+   - #32-#34 偏工作流说明图和文末卡片，不建议强行补 prompt。
+
+#### 对应案例图
+
+- 电商广告与营销创意：#07、#08、#09、#10
+- 商品详情页与品牌卖点图：#11、#12、#14、#15、#16、#18
+- 城市文旅海报：#19、#20
+- 儿童绘本：#21、#22
+- 山海咖啡品牌套件：#23、#24、#25、#26、#27
+- 日常创意与娱乐玩法：#28、#29、#30、#31
+
+![甲木案例-07-电商广告创意](https://upload.maynor1024.live/file/1776936155777_07.jpg)
+![甲木案例-12-亚马逊产品套图](https://upload.maynor1024.live/file/1776936173341_12.jpg)
+![甲木案例-19-城市海报](https://upload.maynor1024.live/file/1776936205798_19.jpg)
+![甲木案例-21-儿童绘本](https://upload.maynor1024.live/file/1776936206758_21.jpg)
+![甲木案例-23-品牌物料](https://upload.maynor1024.live/file/1776936225028_23.jpg)
+![甲木案例-30-双重曝光电影海报](https://upload.maynor1024.live/file/1776936250593_30.jpg)
+
+<details open>
+<summary>查看全部图片（34 张，不省略）</summary>
+
+<table>
+<tr>
+<td align="center" valign="top"><img src="https://upload.maynor1024.live/file/1776936120692_01.jpg" alt="TIME 封面风人物海报" width="220" /><br><sub>#01 TIME 封面风人物海报</sub></td>
+<td align="center" valign="top"><img src="https://upload.maynor1024.live/file/1776936128322_02.png" alt="Lovart 中切换 Image 2 模型" width="220" /><br><sub>#02 Lovart 中切换 Image 2 模型</sub></td>
+<td align="center" valign="top"><img src="https://upload.maynor1024.live/file/1776936127620_03.jpg" alt="网友分享的出师表" width="220" /><br><sub>#03 网友分享的出师表</sub></td>
+</tr>
+<tr>
+<td align="center" valign="top"><img src="https://upload.maynor1024.live/file/1776936134544_04.jpg" alt="AI 试衣对比图" width="220" /><br><sub>#04 AI 试衣对比图</sub></td>
+<td align="center" valign="top"><img src="https://upload.maynor1024.live/file/1776936138812_05.jpg" alt="中国连环画大闹天宫" width="220" /><br><sub>#05 中国连环画大闹天宫</sub></td>
+<td align="center" valign="top"><img src="https://upload.maynor1024.live/file/1776936145924_06.jpg" alt="山海咖啡品牌套件预览" width="220" /><br><sub>#06 山海咖啡品牌套件预览</sub></td>
+</tr>
+<tr>
+<td align="center" valign="top"><img src="https://upload.maynor1024.live/file/1776936155777_07.jpg" alt="弹动洗发水多平台广告案例" width="220" /><br><sub>#07 弹动洗发水多平台广告案例</sub></td>
+<td align="center" valign="top"><img src="https://upload.maynor1024.live/file/1776936153272_08.jpg" alt="产品头图与广告海报" width="220" /><br><sub>#08 产品头图与广告海报</sub></td>
+<td align="center" valign="top"><img src="https://upload.maynor1024.live/file/1776936159326_09.jpg" alt="Instagram 轮播广告" width="220" /><br><sub>#09 Instagram 轮播广告</sub></td>
+</tr>
+<tr>
+<td align="center" valign="top"><img src="https://upload.maynor1024.live/file/1776936161649_10.jpg" alt="品牌活动主视觉" width="220" /><br><sub>#10 品牌活动主视觉</sub></td>
+<td align="center" valign="top"><img src="https://upload.maynor1024.live/file/1776936168009_11.png" alt="商品详情页迁移步骤" width="220" /><br><sub>#11 商品详情页迁移步骤</sub></td>
+<td align="center" valign="top"><img src="https://upload.maynor1024.live/file/1776936173341_12.jpg" alt="亚马逊产品套图" width="220" /><br><sub>#12 亚马逊产品套图</sub></td>
+</tr>
+<tr>
+<td align="center" valign="top"><img src="https://upload.maynor1024.live/file/1776936178593_13.png" alt="单品抠图与元素编辑" width="220" /><br><sub>#13 单品抠图与元素编辑</sub></td>
+<td align="center" valign="top"><img src="https://upload.maynor1024.live/file/1776936181317_14.jpg" alt="洗护品牌成分卖点图" width="220" /><br><sub>#14 洗护品牌成分卖点图</sub></td>
+<td align="center" valign="top"><img src="https://upload.maynor1024.live/file/1776936189067_15.jpg" alt="科学营养成分黑金海报" width="220" /><br><sub>#15 科学营养成分黑金海报</sub></td>
+</tr>
+<tr>
+<td align="center" valign="top"><img src="https://upload.maynor1024.live/file/1776936196038_16.jpg" alt="品牌故事长图" width="220" /><br><sub>#16 品牌故事长图</sub></td>
+<td align="center" valign="top"><img src="https://upload.maynor1024.live/file/1776936191988_17.png" alt="商品详情页编辑界面" width="220" /><br><sub>#17 商品详情页编辑界面</sub></td>
+<td align="center" valign="top"><img src="https://upload.maynor1024.live/file/1776936201026_18.jpg" alt="品牌广告与产品组合图" width="220" /><br><sub>#18 品牌广告与产品组合图</sub></td>
+</tr>
+<tr>
+<td align="center" valign="top"><img src="https://upload.maynor1024.live/file/1776936205798_19.jpg" alt="广州/杭州/深圳城市海报" width="220" /><br><sub>#19 广州/杭州/深圳城市海报</sub></td>
+<td align="center" valign="top"><img src="https://upload.maynor1024.live/file/1776936209713_20.jpg" alt="成都/重庆/西安城市海报" width="220" /><br><sub>#20 成都/重庆/西安城市海报</sub></td>
+<td align="center" valign="top"><img src="https://upload.maynor1024.live/file/1776936206758_21.jpg" alt="儿童绘本跨页插画" width="220" /><br><sub>#21 儿童绘本跨页插画</sub></td>
+</tr>
+<tr>
+<td align="center" valign="top"><img src="https://upload.maynor1024.live/file/1776936213016_22.jpg" alt="儿童绘本竖版页面" width="220" /><br><sub>#22 儿童绘本竖版页面</sub></td>
+<td align="center" valign="top"><img src="https://upload.maynor1024.live/file/1776936225028_23.jpg" alt="山海咖啡品牌物料" width="220" /><br><sub>#23 山海咖啡品牌物料</sub></td>
+<td align="center" valign="top"><img src="https://upload.maynor1024.live/file/1776936229033_24.png" alt="品牌字体与视觉板" width="220" /><br><sub>#24 品牌字体与视觉板</sub></td>
+</tr>
+<tr>
+<td align="center" valign="top"><img src="https://upload.maynor1024.live/file/1776936227599_25.png" alt="品牌元素编辑界面" width="220" /><br><sub>#25 品牌元素编辑界面</sub></td>
+<td align="center" valign="top"><img src="https://upload.maynor1024.live/file/1776936237966_26.png" alt="咖啡杯场景照" width="220" /><br><sub>#26 咖啡杯场景照</sub></td>
+<td align="center" valign="top"><img src="https://upload.maynor1024.live/file/1776936240267_27.jpg" alt="品牌应用展示板" width="220" /><br><sub>#27 品牌应用展示板</sub></td>
+</tr>
+<tr>
+<td align="center" valign="top"><img src="https://upload.maynor1024.live/file/1776936244046_28.jpg" alt="朋友圈改字前后对比" width="220" /><br><sub>#28 朋友圈改字前后对比</sub></td>
+<td align="center" valign="top"><img src="https://upload.maynor1024.live/file/1776936253564_29.jpg" alt="扫描件风格数学卷子" width="220" /><br><sub>#29 扫描件风格数学卷子</sub></td>
+<td align="center" valign="top"><img src="https://upload.maynor1024.live/file/1776936250593_30.jpg" alt="双重曝光电影海报" width="220" /><br><sub>#30 双重曝光电影海报</sub></td>
+</tr>
+<tr>
+<td align="center" valign="top"><img src="https://upload.maynor1024.live/file/1776936258805_31.jpg" alt="原神版英雄联盟场景" width="220" /><br><sub>#31 原神版英雄联盟场景</sub></td>
+<td align="center" valign="top"><img src="https://upload.maynor1024.live/file/1776936260798_32.jpg" alt="Lovart 设计链路说明图" width="220" /><br><sub>#32 Lovart 设计链路说明图</sub></td>
+<td align="center" valign="top"><img src="https://upload.maynor1024.live/file/1776936263714_33.png" alt="Lovart 工作流列表" width="220" /><br><sub>#33 Lovart 工作流列表</sub></td>
+</tr>
+<tr>
+<td align="center" valign="top"><img src="https://upload.maynor1024.live/file/1776936270778_34.png" alt="文末公众号卡片" width="220" /><br><sub>#34 文末公众号卡片</sub></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>查看全部图床链接（34 张）</summary>
+
+1. `https://upload.maynor1024.live/file/1776936120692_01.jpg`
+2. `https://upload.maynor1024.live/file/1776936128322_02.png`
+3. `https://upload.maynor1024.live/file/1776936127620_03.jpg`
+4. `https://upload.maynor1024.live/file/1776936134544_04.jpg`
+5. `https://upload.maynor1024.live/file/1776936138812_05.jpg`
+6. `https://upload.maynor1024.live/file/1776936145924_06.jpg`
+7. `https://upload.maynor1024.live/file/1776936155777_07.jpg`
+8. `https://upload.maynor1024.live/file/1776936153272_08.jpg`
+9. `https://upload.maynor1024.live/file/1776936159326_09.jpg`
+10. `https://upload.maynor1024.live/file/1776936161649_10.jpg`
+11. `https://upload.maynor1024.live/file/1776936168009_11.png`
+12. `https://upload.maynor1024.live/file/1776936173341_12.jpg`
+13. `https://upload.maynor1024.live/file/1776936178593_13.png`
+14. `https://upload.maynor1024.live/file/1776936181317_14.jpg`
+15. `https://upload.maynor1024.live/file/1776936189067_15.jpg`
+16. `https://upload.maynor1024.live/file/1776936196038_16.jpg`
+17. `https://upload.maynor1024.live/file/1776936191988_17.png`
+18. `https://upload.maynor1024.live/file/1776936201026_18.jpg`
+19. `https://upload.maynor1024.live/file/1776936205798_19.jpg`
+20. `https://upload.maynor1024.live/file/1776936209713_20.jpg`
+21. `https://upload.maynor1024.live/file/1776936206758_21.jpg`
+22. `https://upload.maynor1024.live/file/1776936213016_22.jpg`
+23. `https://upload.maynor1024.live/file/1776936225028_23.jpg`
+24. `https://upload.maynor1024.live/file/1776936229033_24.png`
+25. `https://upload.maynor1024.live/file/1776936227599_25.png`
+26. `https://upload.maynor1024.live/file/1776936237966_26.png`
+27. `https://upload.maynor1024.live/file/1776936240267_27.jpg`
+28. `https://upload.maynor1024.live/file/1776936244046_28.jpg`
+29. `https://upload.maynor1024.live/file/1776936253564_29.jpg`
+30. `https://upload.maynor1024.live/file/1776936250593_30.jpg`
+31. `https://upload.maynor1024.live/file/1776936258805_31.jpg`
+32. `https://upload.maynor1024.live/file/1776936260798_32.jpg`
+33. `https://upload.maynor1024.live/file/1776936263714_33.png`
+34. `https://upload.maynor1024.live/file/1776936270778_34.png`
+
+</details>
+
 ## 免责声明
 
 - GPT-Image-2 确实能生成以假乱真的内容，但这也意味着边界更重要
