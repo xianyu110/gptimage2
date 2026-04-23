@@ -6,7 +6,7 @@
 
 A continuously updated English resource for prompt frameworks, real-world workflows, and reusable GPT-Image-2 examples.
 
-Curated from hands-on testing and public case studies | 20+ reusable prompts | 10 practical scenarios
+Curated from hands-on testing and public case studies | 24 reusable prompts | 10 practical scenarios
 
 </div>
 
