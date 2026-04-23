@@ -74,7 +74,7 @@ A reliable structure for GPT-Image-2 prompts:
 
 ### Ecommerce & Product
 
-#### Premium skincare hero banner
+#### AI Ecommerce Hero Banner Prompt for Skincare Serum
 
 ```text
 Create a premium ecommerce hero banner for a skincare serum called "Radiance Barrier Serum". Clean luxury aesthetic, soft white-to-warm-gray gradient background, frosted glass bottle in the center, subtle liquid reflections, minimal but commercial layout, realistic product lighting, high-end beauty campaign style, 4:5.
@@ -84,7 +84,7 @@ A good base prompt for product ads, ecommerce covers, and landing-page hero visu
 
 ![Premium skincare hero banner](https://upload.maynor1024.live/file/1776480570690_img_048.png)
 
-#### Product retouch on white background
+#### AI Product Retouch Prompt for White Background Ecommerce Images
 
 ```text
 Retouch this product image for ecommerce. Keep the product shape accurate, improve lighting and reflections, place it on a pure white background, preserve realistic soft shadow, and make it look like a polished marketplace main image.
@@ -96,7 +96,7 @@ Useful for clean catalog assets and marketplace-ready product images.
 
 ### Brand Poster Design
 
-#### Coffee brand launch poster
+#### AI Brand Launch Poster Prompt for Coffee Campaigns
 
 ```text
 Design a launch poster for a coffee brand called "Mountain & Sea Coffee". Premium but warm visual identity, editorial typography, coffee beans and packaging integrated into the composition, soft cinematic lighting, tasteful brand campaign look, clear English headline, 4:5.
@@ -106,7 +106,7 @@ Works well for brand campaigns, product launches, and premium poster design.
 
 ![Coffee brand launch poster](https://upload.maynor1024.live/file/1776936225028_23.jpg)
 
-#### Multi-platform campaign visual
+#### Multi-Platform AI Campaign Visual Prompt for Shampoo Brand Ads
 
 ```text
 Create a visual campaign system for a shampoo brand across multiple platforms: main poster, social media promo card, mobile ad banner, and carousel cover. Keep brand colors, product shape, slogan hierarchy, and commercial polish consistent across outputs.
@@ -118,7 +118,7 @@ Good for testing brand consistency across formats.
 
 ### Creative Typography
 
-#### City letterform poster
+#### AI Typography Poster Prompt for City Branding and Tourism
 
 ```text
 Create a typography poster around the word "HANGZHOU". Integrate iconic city elements into the letterforms, including West Lake, pagodas, trees, and skyline silhouettes. The composition should feel elegant, integrated, and editorial rather than collage-like.
@@ -130,7 +130,7 @@ Useful for tourism visuals, city branding, and type-driven campaigns.
 
 ### Knowledge Graphics & Infographics
 
-#### Modular infographic
+#### GPT-Image-2 Infographic Prompt for Visual Explainers
 
 ```text
 Create a high-quality vertical infographic explaining GPT-Image-2. Make it feel like a hybrid of a modern encyclopedia page, a collectible visual guide, and a social-media-friendly knowledge card. Use clean modular sections, icons, clear headings, and an elegant editorial layout.
@@ -140,7 +140,7 @@ A strong pattern for educational graphics and knowledge cards.
 
 ![Modular infographic](https://upload.maynor1024.live/file/1776925334708_15.png)
 
-#### Textbook-style diagram
+#### AI Educational Infographic Prompt for Textbook-Style Diagrams
 
 ```text
 Create a clean educational infographic explaining a scientific topic with modular sections, rounded information boxes, clear labels, simple diagrams, and a light background. The hierarchy must be readable at a glance.
@@ -152,7 +152,7 @@ Useful for explainers, classroom visuals, and professional diagrams.
 
 ### UI Recreation
 
-#### Ecommerce app home screen
+#### AI Ecommerce App UI Screenshot Prompt
 
 ```text
 Generate a highly realistic mobile ecommerce app homepage screenshot. Include the status bar, search box, category tabs, promo banner, icon grid, flash sale module, and a recommendation feed. The UI should feel like a believable production app rather than a concept mockup.
@@ -162,7 +162,7 @@ Best for UI realism, layout testing, and product storytelling.
 
 ![Ecommerce app home screen](https://upload.maynor1024.live/file/1776480347969_img_025.png)
 
-#### Social post screenshot
+#### AI Social Media Screenshot Prompt
 
 ```text
 Generate a realistic social media screenshot with believable profile details, timestamps, comments, and engagement UI. Make the interface look native to a mainstream app and keep the typography legible.
@@ -174,7 +174,7 @@ Great for social UI recreation and fake interface testing.
 
 ### Realistic Photography
 
-#### Mall documentary photo
+#### Photorealistic Shopping Mall Documentary Photo Prompt
 
 ```text
 Create an extremely realistic documentary-style photo inside a shopping mall at dusk. A casually dressed man has just stepped off the escalator while checking his phone. Mixed lighting from ceiling lamps, storefronts, and LED screens, glossy tile reflections, natural skin texture, slightly imperfect composition, photorealistic.
@@ -184,7 +184,7 @@ A solid realism test for mixed light and candid human behavior.
 
 ![Mall documentary photo](https://upload.maynor1024.live/file/1776480142529_img_008.jpg)
 
-#### Convenience store street scene
+#### Photorealistic Convenience Store Street Scene Prompt
 
 ```text
 Create a hyper-realistic street photo outside a convenience store at night. Several young people are casually talking, checking phones, and holding drinks. Bright store light spills onto the street, with bicycles, signage, reflections, and ordinary clothing details. photorealistic.
@@ -196,7 +196,7 @@ Good for testing group realism and everyday urban scenes.
 
 ### Character Consistency
 
-#### Fashion variation from one character
+#### Character Consistency Outfit Variation Prompt
 
 ```text
 Use one character reference image and generate multiple outfit variations while keeping the same face, proportions, and identity. Show front-facing, side-angle, and half-body compositions with consistent character design.
@@ -208,7 +208,7 @@ Useful for lookbooks, avatar systems, and character iteration.
 
 ### Image Editing & Reference
 
-#### Brand collaboration with pet reference
+#### Pet Brand Collaboration Poster Prompt from Reference Image
 
 ```text
 Using the uploaded cat as the exact visual reference, create a playful commercial collaboration poster between the cat and a fast-food brand. Keep the cat's markings and identity consistent, add branded colors, food props, staff uniform details, and a polished campaign layout with readable text.
@@ -218,7 +218,7 @@ Good for reference-based editing, brand mashups, and poster generation.
 
 ![Brand collaboration with pet reference](https://upload.maynor1024.live/file/1776480357820_img_026.png)
 
-#### Style transfer with layout preservation
+#### Layout-Preserving Style Transfer Poster Edit Prompt
 
 ```text
 Use the uploaded poster as a layout and style reference. Keep the composition, typography rhythm, and overall design language, but transform the original spring scene into a winter scene with matching visual quality.
@@ -230,7 +230,7 @@ Useful when you need editing with structure preservation.
 
 ### Art & Illustration
 
-#### Multi-layer paper art scene
+#### 3D Layered Papercraft Illustration Prompt
 
 ```text
 Create a high-saturation 3D layered papercraft scene with rich depth, clean edge separation, and a playful but premium editorial look. Use strong color contrast and a carefully staged front-facing composition.
@@ -242,7 +242,7 @@ Great for stylized illustration and visual experimentation.
 
 ### Fun Experiments
 
-#### Cinematic parody poster
+#### Cinematic Parody Movie Poster Prompt
 
 ```text
 Create a cinematic parody movie poster with bold title typography, dramatic character arrangement, and a polished theatrical composition. Make it feel like a real release poster rather than a meme.
@@ -260,6 +260,9 @@ Useful for viral visual experiments and entertainment graphics.
 
 When you want the image to feel less plastic and more camera-like, `photorealistic` is often the highest-leverage keyword.
 
+![Photorealistic 35mm-style travel shot](https://upload.maynor1024.live/file/1776831365224_wx_026_b585044656.jpg)
+![Photorealistic shopping mall documentary scene](https://upload.maynor1024.live/file/1776480142529_img_008.jpg)
+
 ### 2. Use Thinking mode for harder tasks
 
 Thinking mode is more useful when you need:
@@ -269,17 +272,27 @@ Thinking mode is more useful when you need:
 - multi-image consistency
 - reference-heavy editing
 
+![Structured infographic with richer planning](https://upload.maynor1024.live/file/1776925334708_15.png)
+
 ### 3. Give the exact text
 
 Instead of saying “add some promotional text,” write the actual headline, subheadline, price, and CTA.
+
+![Rendered text and layout example](https://upload.maynor1024.live/file/1776831460254_wx_048_05ab5cbe8c.jpg)
 
 ### 4. Reference image + edit is often stronger than pure text
 
 For product, UI, and brand work, starting from an image and editing it usually produces more stable commercial results.
 
+![Reference-based poster edit](https://upload.maynor1024.live/file/1776480461550_img_036.jpg)
+![Reference-based pet collaboration edit](https://upload.maynor1024.live/file/1776480099150_img_004.jpg)
+
 ### 5. GPT-Image-2 already knows many visual systems
 
 You often do not need to over-explain common interfaces, brand aesthetics, or platform patterns. Describe the task clearly and let the model use its world knowledge.
+
+![YouTube homepage recreation](https://upload.maynor1024.live/file/1776831488303_wx_053_2bafb78225.png)
+![Automotive website visual system example](https://upload.maynor1024.live/file/1776831493207_wx_056_18cd9b1683.png)
 
 ---
 
@@ -295,6 +308,12 @@ The Chinese version of this project also tracks public article case studies from
 If you want the full image-heavy case study archive, the Chinese site currently has the most complete coverage:
 
 - https://awesome.gptimage2.asia/
+
+Representative examples from the Chinese archive:
+
+![AI NewRank case study example](https://upload.maynor1024.live/file/1776925334708_15.png)
+![APPSO case study example](https://upload.maynor1024.live/file/1776927598909_12.png)
+![JiaMu case study example](https://upload.maynor1024.live/file/1776936155777_07.jpg)
 
 ---
 
