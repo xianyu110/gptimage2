@@ -120,11 +120,12 @@ jobs:
           APIPRO_MAX_RETRIES: "4"
           APIPRO_RETRY_SECONDS: "5"
           APIPRO_TIMEOUT_SECONDS: "60"
-          APIPRO_LOOKBACK_HOURS: "72"
-          APIPRO_MAX_ITEMS: "80"
-          APIPRO_MIN_VIEWS: "200"
-          APIPRO_MIN_RETWEETS: "1"
-          APIPRO_QUERY: '(gptimage2 OR gpt-image-2 OR "gpt image 2" OR "gpt image 2.0" OR "gpt-image-2.0" OR "chatgpt image 2" OR "chatgpt images 2.0") (prompt OR 提示词 OR "made with GPT Image 2")'
+          APIPRO_LOOKBACK_HOURS: "168"
+          APIPRO_MAX_ITEMS: "120"
+          APIPRO_MIN_VIEWS: "0"
+          APIPRO_MIN_RETWEETS: "0"
+          APIPRO_HISTORY_MAX_ITEMS: "360"
+          APIPRO_QUERY: '(gptimage2 OR gpt-image-2 OR "gpt image 2" OR "gpt image 2.0" OR "gpt-image-2.0" OR "chatgpt image 2" OR "chatgpt images 2.0" OR "GPT Image 2" OR "Images 2.0") (prompt OR prompts OR 提示词 OR "Prompt-" OR "prompt:" OR "made with")'
           # Optional overrides:
           # APIPRO_LOOKBACK_HOURS: '48'
           # APIPRO_MAX_ITEMS: '60'
@@ -134,21 +135,16 @@ jobs:
           echo "APIPRO_FALLBACK_MODELS=${APIPRO_FALLBACK_MODELS}"
           python scripts/fetch_x_prompts.py
 
-      - name: Render latest X prompt summary into README
-        if: github.event_name != 'schedule' || steps.gate.outputs.should_run == 'true'
-        run: |
-          python scripts/render_latest_x_section.py
-
       - name: Commit and push if changed
         if: github.event_name != 'schedule' || steps.gate.outputs.should_run == 'true'
         run: |
-          if git diff --quiet -- data/latest-prompts.json README.md; then
+          if git diff --quiet -- data/latest-prompts.json; then
             echo "No data changes."
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/latest-prompts.json README.md
+          git add data/latest-prompts.json
           git commit -m "chore(data): refresh X prompts ($(date -u +'%Y-%m-%d'))"
           git push

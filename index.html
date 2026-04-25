@@ -1737,9 +1737,31 @@
         const meta = payload && typeof payload === 'object' && payload.meta && typeof payload.meta === 'object'
             ? payload.meta
             : {};
-        const groups = Array.isArray(payload && payload.dates) ? payload.dates : [];
-        const total = Number(meta.count || 0);
-        const dateCount = Number(meta.date_count || groups.length || 0);
+        let groups = Array.isArray(payload && payload.dates) ? payload.dates : [];
+        if (!groups.length && Array.isArray(payload && payload.items)) {
+            const groupedItems = {};
+            payload.items.forEach((item) => {
+                if (!item || !item.prompt) return;
+                const createdAt = String(item.created_at || '');
+                const dateKey = /^\d{4}-\d{2}-\d{2}/.test(createdAt) ? createdAt.slice(0, 10) : 'unknown';
+                if (!groupedItems[dateKey]) groupedItems[dateKey] = [];
+                groupedItems[dateKey].push(item);
+            });
+            groups = Object.keys(groupedItems).sort().reverse().map((dateKey) => ({
+                date: dateKey,
+                count: groupedItems[dateKey].length,
+                items: groupedItems[dateKey]
+            }));
+        }
+        groups = groups
+            .map((group) => ({
+                date: group.date || 'unknown',
+                items: Array.isArray(group.items) ? group.items.filter((item) => item && item.prompt) : []
+            }))
+            .filter((group) => group.items.length)
+            .map((group) => ({ date: group.date, count: group.items.length, items: group.items }));
+        const total = groups.reduce((sum, group) => sum + group.items.length, 0);
+        const dateCount = groups.length;
         const generatedAt = String(meta.generated_at_utc || '').trim();
         const model = String(meta.model || '--').trim() || '--';
         const provider = String(meta.provider || '--').trim() || '--';

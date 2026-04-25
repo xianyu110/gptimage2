@@ -408,6 +408,83 @@ def normalize_output(
     return output
 
 
+def load_existing_output(path: str) -> Dict[str, Any] | None:
+    if not path or not os.path.exists(path):
+        return None
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            payload = json.load(f)
+        return payload if isinstance(payload, dict) else None
+    except Exception as exc:  # pragma: no cover
+        print(f"Existing output ignored: {exc}", file=sys.stderr)
+        return None
+
+
+def flatten_output_items(payload: Dict[str, Any] | None) -> List[Dict[str, Any]]:
+    if not isinstance(payload, dict):
+        return []
+
+    raw_items: List[Any] = []
+    dates = payload.get("dates")
+    if isinstance(dates, list):
+        for group in dates:
+            if isinstance(group, dict) and isinstance(group.get("items"), list):
+                raw_items.extend(group["items"])
+
+    if isinstance(payload.get("items"), list):
+        raw_items.extend(payload["items"])
+
+    items: List[Dict[str, Any]] = []
+    for item in raw_items:
+        if not isinstance(item, dict):
+            continue
+        normalized = normalize_item(item)
+        if item_has_required_fields(normalized):
+            items.append(normalized)
+    return items
+
+
+def item_identity(item: Dict[str, Any]) -> str:
+    x_url = str(item.get("x_url") or item.get("url") or "").strip().lower()
+    if x_url:
+        return "url:" + x_url
+    return "prompt:" + str(item.get("prompt") or "").strip().lower()
+
+
+def merge_outputs(existing: Dict[str, Any] | None, new_output: Dict[str, Any], max_items: int) -> Dict[str, Any]:
+    existing_items = flatten_output_items(existing)
+    new_items = flatten_output_items(new_output)
+    if not new_items and existing_items and isinstance(existing, dict):
+        print("No new prompt items; preserving existing history.", file=sys.stderr)
+        return existing
+
+    merged: List[Dict[str, Any]] = []
+    seen: set[str] = set()
+    for item in new_items + existing_items:
+        key = item_identity(item)
+        if not key or key in seen:
+            continue
+        seen.add(key)
+        merged.append(item)
+
+    merged.sort(key=item_sort_key, reverse=True)
+    merged = merged[: max(1, max_items)]
+
+    generated_at = str(new_output.get("meta", {}).get("generated_at_utc") or iso_utc_now())
+    fallback_date = generated_at[:10]
+    date_groups = group_items_by_date(merged, fallback_date)
+    meta = dict(new_output.get("meta", {}))
+    meta.update(
+        {
+            "count": len(merged),
+            "date_count": len(date_groups),
+            "history_count": len(existing_items),
+            "new_count": len(new_items),
+        }
+    )
+    return {"meta": meta, "dates": date_groups, "items": merged}
+
+
 def write_json(path: str, payload: Dict[str, Any]) -> None:
     parent = os.path.dirname(path)
     if parent:
@@ -438,6 +515,7 @@ def main() -> int:
     max_retries = env_int("APIPRO_MAX_RETRIES", 4, 0, 10)
     retry_seconds = env_int("APIPRO_RETRY_SECONDS", 8, 1, 60)
     output_file = os.getenv("APIPRO_OUTPUT_FILE", "data/latest-prompts.json").strip()
+    history_max_items = env_int("APIPRO_HISTORY_MAX_ITEMS", 240, 1, 1000)
     model_candidates = [model]
     if fallback_models_raw:
         extras = [m.strip() for m in fallback_models_raw.split(",") if m.strip()]
@@ -482,6 +560,7 @@ def main() -> int:
         min_views=min_views,
         min_retweets=min_retweets,
     )
+    output = merge_outputs(load_existing_output(output_file), output, history_max_items)
     write_json(output_file, output)
     print(
         f"Saved {output['meta']['count']} prompt items across {output['meta']['date_count']} dates to {output_file}",
