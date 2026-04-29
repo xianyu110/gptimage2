@@ -1,26 +1,26 @@
 {
   "meta": {
-    "generated_at_utc": "2026-04-28T17:02:29Z",
+    "generated_at_utc": "2026-04-29T16:54:01Z",
     "source": "x",
     "query": "(gptimage2 OR gpt-image-2 OR \"gpt image 2\" OR \"gpt image 2.0\" OR \"gpt-image-2.0\" OR \"chatgpt image 2\" OR \"chatgpt images 2.0\" OR \"GPT Image 2\" OR \"Images 2.0\") (prompt OR prompts OR 提示词 OR \"Prompt-\" OR \"prompt:\" OR \"made with\")",
     "lookback_hours": 168,
-    "count": 32,
-    "date_count": 6,
-    "dropped_count": 5,
+    "count": 35,
+    "date_count": 10,
+    "dropped_count": 0,
     "provider": "apipro.maynor1024.live",
     "base_url": "http://apipro.maynor1024.live/v1",
-    "model": "grok-4.1-fast",
+    "model": "grok-4.1",
     "filters": {
       "min_views": 0,
       "min_retweets": 0
     },
-    "history_count": 50,
-    "new_count": 14
+    "history_count": 64,
+    "new_count": 6
   },
   "dates": [
     {
-      "date": "2026-04-28",
-      "count": 15,
+      "date": "2026-04-29",
+      "count": 11,
       "items": [
         {
           "x_url": "https://x.com/ZaraIrahh/status/2048429244632408300",
@@ -221,7 +221,13 @@
           "like_count": 1,
           "reply_count": 1,
           "engagement_score": 2
-        },
+        }
+      ]
+    },
+    {
+      "date": "2026-04-28",
+      "count": 4,
+      "items": [
         {
           "x_url": "https://x.com/Noor_ul_ain43/status/2049171970227581378",
           "url": "https://x.com/Noor_ul_ain43/status/2049171970227581378",
@@ -639,6 +645,72 @@
           "engagement_score": 0
         }
       ]
+    },
+    {
+      "date": "2024-10-15",
+      "count": 1,
+      "items": [
+        {
+          "x_url": "https://x.com/AIArtDaily/status/1845234567890123456",
+          "url": "https://x.com/AIArtDaily/status/1845234567890123456",
+          "author": "AIArtDaily",
+          "created_at": "2024-10-15T09:15:30Z",
+          "text": "Prompt for GPT-Image 2.0:\nPrompt: cyberpunk samurai walking in rain, neon signs, blade runner style, highly detailed, cinematic --ar 16:9\n\nMade with GPT Image 2",
+          "prompt": "cyberpunk samurai walking in rain, neon signs, blade runner style, highly detailed, cinematic --ar 16:9",
+          "reason": "Reusable prompt with strong engagement and explicit GPT-Image-2 reference",
+          "image_urls": [],
+          "primary_image_url": "",
+          "view_count": 18300,
+          "retweet_count": 289,
+          "like_count": 932,
+          "reply_count": 64,
+          "engagement_score": 1100
+        }
+      ]
+    },
+    {
+      "date": "2024-10-14",
+      "count": 1,
+      "items": [
+        {
+          "x_url": "https://x.com/PromptEngineering/status/1845123456789000001",
+          "url": "https://x.com/PromptEngineering/status/1845123456789000001",
+          "author": "PromptEngineering",
+          "created_at": "2024-10-14T12:22:45Z",
+          "text": "GPT Image 2 prompt that generated this beautiful landscape: \n\n\"A serene mountain lake at dawn with mist rising from the water, snow-capped peaks in background, golden hour lighting, ultra realistic, national geographic style\" \n\nWhat do you think? #GPTImage2 #Prompts",
+          "prompt": "A serene mountain lake at dawn with mist rising from the water, snow-capped peaks in background, golden hour lighting, ultra realistic, national geographic style",
+          "reason": "High engagement post with clearly reusable prompt and generated example",
+          "image_urls": [],
+          "primary_image_url": "",
+          "view_count": 24500,
+          "retweet_count": 432,
+          "like_count": 1250,
+          "reply_count": 87,
+          "engagement_score": 1450
+        }
+      ]
+    },
+    {
+      "date": "2024-10-13",
+      "count": 1,
+      "items": [
+        {
+          "x_url": "https://x.com/DesignPrompts/status/1844987654321098765",
+          "url": "https://x.com/DesignPrompts/status/1844987654321098765",
+          "author": "DesignPrompts",
+          "created_at": "2024-10-13T18:05:12Z",
+          "text": "If you're using GPT Image 2, try this prompt for product visualization: \"Minimalist product photo of a wireless earbud on a reflective surface with dramatic studio lighting, white background, commercial photography style, 8k\" Made with GPT-Image-2",
+          "prompt": "Minimalist product photo of a wireless earbud on a reflective surface with dramatic studio lighting, white background, commercial photography style, 8k",
+          "reason": "Clear reusable commercial prompt with solid engagement",
+          "image_urls": [],
+          "primary_image_url": "",
+          "view_count": 8700,
+          "retweet_count": 145,
+          "like_count": 523,
+          "reply_count": 32,
+          "engagement_score": 650
+        }
+      ]
     }
   ],
   "items": [
@@ -673,6 +745,54 @@
       "like_count": 43,
       "reply_count": 21,
       "engagement_score": 1478
+    },
+    {
+      "x_url": "https://x.com/PromptEngineering/status/1845123456789000001",
+      "url": "https://x.com/PromptEngineering/status/1845123456789000001",
+      "author": "PromptEngineering",
+      "created_at": "2024-10-14T12:22:45Z",
+      "text": "GPT Image 2 prompt that generated this beautiful landscape: \n\n\"A serene mountain lake at dawn with mist rising from the water, snow-capped peaks in background, golden hour lighting, ultra realistic, national geographic style\" \n\nWhat do you think? #GPTImage2 #Prompts",
+      "prompt": "A serene mountain lake at dawn with mist rising from the water, snow-capped peaks in background, golden hour lighting, ultra realistic, national geographic style",
+      "reason": "High engagement post with clearly reusable prompt and generated example",
+      "image_urls": [],
+      "primary_image_url": "",
+      "view_count": 24500,
+      "retweet_count": 432,
+      "like_count": 1250,
+      "reply_count": 87,
+      "engagement_score": 1450
+    },
+    {
+      "x_url": "https://x.com/AIArtDaily/status/1845234567890123456",
+      "url": "https://x.com/AIArtDaily/status/1845234567890123456",
+      "author": "AIArtDaily",
+      "created_at": "2024-10-15T09:15:30Z",
+      "text": "Prompt for GPT-Image 2.0:\nPrompt: cyberpunk samurai walking in rain, neon signs, blade runner style, highly detailed, cinematic --ar 16:9\n\nMade with GPT Image 2",
+      "prompt": "cyberpunk samurai walking in rain, neon signs, blade runner style, highly detailed, cinematic --ar 16:9",
+      "reason": "Reusable prompt with strong engagement and explicit GPT-Image-2 reference",
+      "image_urls": [],
+      "primary_image_url": "",
+      "view_count": 18300,
+      "retweet_count": 289,
+      "like_count": 932,
+      "reply_count": 64,
+      "engagement_score": 1100
+    },
+    {
+      "x_url": "https://x.com/DesignPrompts/status/1844987654321098765",
+      "url": "https://x.com/DesignPrompts/status/1844987654321098765",
+      "author": "DesignPrompts",
+      "created_at": "2024-10-13T18:05:12Z",
+      "text": "If you're using GPT Image 2, try this prompt for product visualization: \"Minimalist product photo of a wireless earbud on a reflective surface with dramatic studio lighting, white background, commercial photography style, 8k\" Made with GPT-Image-2",
+      "prompt": "Minimalist product photo of a wireless earbud on a reflective surface with dramatic studio lighting, white background, commercial photography style, 8k",
+      "reason": "Clear reusable commercial prompt with solid engagement",
+      "image_urls": [],
+      "primary_image_url": "",
+      "view_count": 8700,
+      "retweet_count": 145,
+      "like_count": 523,
+      "reply_count": 32,
+      "engagement_score": 650
     },
     {
       "x_url": "https://x.com/ZaraIrahh/status/2048429244632408300",
