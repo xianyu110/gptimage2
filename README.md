@@ -48,6 +48,7 @@
 - Codex 使用：<https://maynorai.jichiyun.sbs/buy/13>
 - 国外使用地址：<https://gptimage2.asia/>
 - 英文版站点：<https://awesome.gptimage2.asia/en/>
+- [Emu](https://image.tinchak0207.xyz) - 在线生成 GPT Image 2 / Nano Banana Pro 图片，登录即用，不用中转站、不用申请 API Key
 
 > 第三方入口请自行确认可用性、价格和数据安全；重要素材建议优先使用官方或可信环境。
 
